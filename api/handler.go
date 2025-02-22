@@ -1,16 +1,14 @@
 package api
 
 import (
-	"html/template"
+	"fmt"
 	"net/http"
 )
 
 func Handler() {
 
 	h1 := func(w http.ResponseWriter, r *http.Request) {
-		temp := template.Must(template.ParseFiles("index.html"))
-		data := "ToDo"
-		temp.Execute(w, data)
+		fmt.Fprintf(w, "Hello")
 
 	}
 
